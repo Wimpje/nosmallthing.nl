@@ -26,36 +26,8 @@ npm run dev
 Navigate to [localhost:5000](http://localhost:5000). You should see the site running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
 
-## Deploying to the web
+### Deploy to the web
 
-### With [now](https://zeit.co/now)
+I'm using netlify (which is pretty awesome). Deploy is done automatically when the ```master``` branch is pushed to the Github repo. Yeah, that's all...
 
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef949cbf-f7df-44fc-82b2-b3ce04962920/deploy-status)](https://app.netlify.com/sites/friendly-wescoff-e58da5/deploys)

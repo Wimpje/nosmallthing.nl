@@ -31,6 +31,6 @@
   </div>
 {:else}
   <div class="center" transition:fade={{ delay: 300, duration: 300 }}>
-     this page is not done yet. come back later to be enlightened.
+     this page is not ready yet. but it's already dynamic, look at this awesome fade transition!
   </div>
 {/if}
