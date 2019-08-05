@@ -14,23 +14,26 @@
 </script>
 
 <style>
-.center {
-   display:flex;
-   justify-content:center;
-   align-items:center;
-}
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
+
 <div class="center">
-   <img src="logo.png" alt="Site logo" />
+  <img src="logo.png" alt="Site logo" />
 </div>
-<h1 class="center">{whatis}</h1>
-{#if showButtons}
-  <div class="center choose-wisely" transition:fade={{ delay: 0, duration: 300 }}>
-    <button on:click={handleWhy}>why not?</button>
-    <button on:click={handleKnowItAll}>i know</button>
-  </div>
-{:else}
-  <div class="center" transition:fade={{ delay: 300, duration: 300 }}>
-     this page is not ready yet. but it's already dynamic, look at this awesome fade transition!
-  </div>
-{/if}
+<h1 class="center" id="what" aria-live="polite">{whatis}</h1>
+
+  {#if showButtons}
+    <div class="center choose-wisely" transition:fade={{ delay: 0, duration: 300 }}>
+      <button aria-controls="what" on:click={handleWhy}>why not?</button>
+      <button aria-controls="what" on:click={handleKnowItAll}>i know</button>
+    </div>
+  {:else}
+    <div class="center" aria-live="polite" transition:fade={{ delay: 310, duration: 300 }}>
+      this page is not ready yet. but it's already dynamic, look at this awesome
+      fade transition!
+    </div>
+  {/if}
